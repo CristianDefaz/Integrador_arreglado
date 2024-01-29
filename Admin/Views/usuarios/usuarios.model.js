@@ -27,7 +27,7 @@ class Usuarios_Model {
       $.each(res, (index, valor) => {
         var fondo;
         if (valor.Rol == "Administrador") fondo = "bg-primary";
-        else if (valor.Rol == "Vendedor") fondo = "bg-success";
+        else if (valor.Rol == "Empleado") fondo = "bg-success";
         else if (valor.Rol == "Cliente") fondo = "bg-warning";
         else if (valor.Rol == "Gerente") fondo = "bg-danger";
         else if (valor.Rol == "Cajero") fondo = "bg-info";

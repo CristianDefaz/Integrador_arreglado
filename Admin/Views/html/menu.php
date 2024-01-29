@@ -1,3 +1,4 @@
+
 <aside class="left-sidebar">
   <!-- Sidebar scroll-->
   <div>
@@ -28,87 +29,177 @@
           <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
           <span class="hide-menu">FUNCIONALIDAD</span>
         </li>
+        
         <!-- /*****************************************************************************************************************************************************************************/
                                                                                         MENU DE USUARIOS
             /*****************************************************************************************************************************************************************************/ -->
-        <li class="sidebar-item">
-          <a class="sidebar-link" href="Usuarios/usuarios.php" target="base" aria-expanded="false">
-            <span>
-              <i class="ti ti-user"></i>
-            </span>
-            <span class="hide-menu">Usuarios</span>
-          </a>
-        </li>
+            <li class="sidebar-item">
+                <?php
+                $Rol = $_SESSION['Rol'];
+                if ($Rol == 'Administrador') {
+                ?>
+                <a class="sidebar-link" href="Usuarios/usuarios.php" target="base" aria-expanded="false">
+                    <span>
+                        <i class="ti ti-user"></i>
+                    </span>
+                    <span class="hide-menu">Usuarios</span>
+                </a>
+                <?php
+                } // Agregué el cierre de la llave para la condición
+                ?>
+            </li>
         <!-- /*****************************************************************************************************************************************************************************/
                                                                                         MENU DE CATEGORIA
             /*****************************************************************************************************************************************************************************/ -->
-        <li class="sidebar-item">
-          <a class="sidebar-link" href="categoria/categoria.php" target="base" aria-expanded="false">
-            <span>
-              <i class="ti ti-tag"></i>
-            </span>
-            <span class="hide-menu">Categoria</span>
-          </a>
-        </li>
+        
+            <li class="sidebar-item">
+              <?php
+              $Rol = $_SESSION['Rol'];
+              if ($Rol == 'Administrador') {
+              ?>
+             <a class="sidebar-link" href="categoria/categoria.php" target="base" aria-expanded="false">
+                <span>
+                  <i class="ti ti-tag"></i>
+                </span>
+                <span class="hide-menu">Categoria</span>
+              </a>
+              <?php
+              } elseif($Rol == 'Empleado') {
+              ?>
+              <a class="sidebar-link" href="categoria/categoria.php" target="base" aria-expanded="false">
+                <span>
+                  <i class="ti ti-tag"></i>
+                </span>
+                <span class="hide-menu">Categoria</span>
+              </a>
+              <?php
+              } // Cierre de la llave para la condición
+              ?>
+          </li>
+        
+            
         <!-- /*****************************************************************************************************************************************************************************/
                                                                                         MENU DE Productos
             /*****************************************************************************************************************************************************************************/ -->
-        <li class="sidebar-item">
-          <a class="sidebar-link" href="productos2/productos2.php" target="base" aria-expanded="false">
-            <span>
-              <i class="ti ti-package"></i>
-            </span>
-            <span class="hide-menu">Productos</span>
-          </a>
-        </li>
+            <li class="sidebar-item">
+              <?php
+              $Rol = $_SESSION['Rol'];
+              if ($Rol == 'Administrador') {
+              ?>
+             <a class="sidebar-link" href="productos2/productos2.php" target="base" aria-expanded="false">
+                <span>
+                  <i class="ti ti-package"></i>
+                </span>
+                <span class="hide-menu">Productos</span>
+              </a>
+              <?php
+              } elseif($Rol == 'Empleado') {
+              ?>
+               <a class="sidebar-link" href="productos2/productos2.php" target="base" aria-expanded="false">
+                <span>
+                  <i class="ti ti-package"></i>
+                </span>
+                <span class="hide-menu">Productos</span>
+              </a>
+              <?php
+              } // Cierre de la llave para la condición
+              ?>
+          </li>
         <!-- /*****************************************************************************************************************************************************************************/
                                                                                         MENU DE ORDER
             /*****************************************************************************************************************************************************************************/ -->
-        <li class="sidebar-item">
-          <a class="sidebar-link" href="orden/orden.php" target="base" aria-expanded="false">
-            <span>
-              <i class="ti ti-shopping-cart"></i>
-            </span>
-            <span class="hide-menu">Orden</span>
-          </a>
-        </li>
+            <li class="sidebar-item">
+              <?php
+              $Rol = $_SESSION['Rol'];
+              if ($Rol == 'Administrador') {
+              ?>
+              <a class="sidebar-link" href="orden/orden.php" target="base" aria-expanded="false">
+                <span>
+                  <i class="ti ti-shopping-cart"></i>
+                </span>
+                <span class="hide-menu">Orden</span>
+              </a>
+              <?php
+              } elseif($Rol == 'Empleado') {
+              ?>
+               <a class="sidebar-link" href="orden/orden.php" target="base" aria-expanded="false">
+                <span>
+                  <i class="ti ti-shopping-cart"></i>
+                </span>
+                <span class="hide-menu">Orden</span>
+              </a>
+              <?php
+              } // Cierre de la llave para la condición
+              ?>
+          </li>
+        
 
         <!-- /*****************************************************************************************************************************************************************************/
                                                                                         MENU DE ORDER
          /*****************************************************************************************************************************************************************************/ -->
-        <li class="sidebar-item">
-          <a class="sidebar-link" href="palabras_chat/palabras.php" target="base" aria-expanded="false">
-            <span>
-              <i class="ti ti-pencil"></i>
-            </span>
-            <span class="hide-menu">Palabras</span>
-          </a>
-        </li>
+         <li class="sidebar-item">
+              <?php
+              $Rol = $_SESSION['Rol'];
+              if ($Rol == 'Administrador') {
+              ?>
+              <a class="sidebar-link" href="palabras_chat/palabras.php" target="base" aria-expanded="false">
+                <span>
+                  <i class="ti ti-pencil"></i>
+                </span>
+                <span class="hide-menu">Palabras</span>
+              </a>
+              <?php
+              } elseif($Rol == 'Empleado') {
+              ?>
+                <a class="sidebar-link" href="palabras_chat/palabras.php" target="base" aria-expanded="false">
+                  <span>
+                    <i class="ti ti-pencil"></i>
+                  </span>
+                  <span class="hide-menu">Palabras</span>
+                </a>
+              <?php
+              } // Cierre de la llave para la condición
+              ?>
+          </li>
 
 
         <!-- /*****************************************************************************************************************************************************************************/
                                                                                         MENU DE PERSONALIZACION
             /*****************************************************************************************************************************************************************************/ -->
+      
         <li class="sidebar-item">
-          <a class="sidebar-link" href="pagos/pagos.php" target="base" aria-expanded="false">
-            <span>
-              <i class="ti ti-file"></i>
-            </span>
-            <span class="hide-menu">Pagos</span>
-          </a>
-        </li>
+                <?php
+                $Rol = $_SESSION['Rol'];
+                if ($Rol == 'Administrador') {
+                ?>
+               <a class="sidebar-link" href="pagos/pagos.php" target="base" aria-expanded="false">
+                  <span>
+                    <i class="ti ti-file"></i>
+                  </span>
+                  <span class="hide-menu">Pagos</span>
+                </a>
+                <?php
+                } // Agregué el cierre de la llave para la condición
+                ?>
+            </li>
         <!-- /*****************************************************************************************************************************************************************************/
                                                                                         MENU DE DIRECION PAGINA WEB
             /*****************************************************************************************************************************************************************************/ -->
         <li class="sidebar-item">
-          <a class="sidebar-link" href="http://localhost/integrador_sexto/Cliente/views/index.php?page=home/home"  aria-expanded="false">
-            <span>
-              <i class="ti ti-world"></i>
-            </span>
-            <span class="hide-menu">Comercio Electronico</span>
-          </a>
-        </li>
-
+                <?php
+                $Rol = $_SESSION['Rol'];
+                if ($Rol == 'Administrador') {
+                ?>
+              <a class="sidebar-link" href="http://localhost/integrador_sexto/Cliente/views/index.php?page=home/home"  aria-expanded="false">
+                <span>
+                  <i class="ti ti-world"></i>
+                </span>
+                <span class="hide-menu">Comercio Electronico</span>
+              </a>
+                <?php
+                } // Agregué el cierre de la llave para la condición
+                ?>
+            </li>
         <!-- /*****************************************************************************************************************************************************************************/
                                                                                         FIN MENU DE ACCESSO Y REGISTRAR
             /*****************************************************************************************************************************************************************************/ -->

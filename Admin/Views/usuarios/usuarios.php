@@ -87,8 +87,8 @@
                         <label for="Rol">Rol</label>
                         <select name="Rol" id="Rol" class="form-control">
                             <option value="Administrador">Administrador</option>
-                            <!-- <option value="Vendedor">Vendedor</option>
-                            <option value="Cliente">Cliente</option>
+                            <option value="Empleado">Empleado</option>
+                            <!-- <option value="Cliente">Cliente</option>
                             <option value="Gerente">Gerente</option>
                             <option value="Cajero">Cajero</option> -->
                         </select>
